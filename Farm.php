@@ -5,18 +5,27 @@ namespace Farm;
 
 
 
+use Exception;
+
 class Farm
 {
     protected array $animals = [];
     protected array $products = [];
 
-    public function addAnimal(&$animal)
+    /**
+     * @throws Exception
+     */
+    public function addAnimal($animal)
     {
-        $uniqueId = self::getUniqueId($animal);
-        $this->animals[$uniqueId] = $animal;
+        if($animal instanceof Animal\FarmAnimal){
+            $uniqueId = self::getUniqueId($animal);
+            $this->animals[$uniqueId] = $animal;
+        }else{
+            throw new Exception('Object of the unsuitable class');
+        }
     }
 
-    private static function getUniqueId($animal)
+    private static function getUniqueId($animal): int
     {
         return spl_object_id($animal);
     }

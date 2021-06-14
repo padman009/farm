@@ -3,7 +3,6 @@
 
 namespace Farm\Animal;
 
-
 abstract class FarmAnimal
 {
     const ANIMAL_TYPE = '';

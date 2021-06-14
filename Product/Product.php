@@ -14,12 +14,12 @@ abstract class Product
         $this->count = $count;
     }
 
-    public function getCount()
+    public function getCount(): int
     {
         return $this->count;
     }
 
-    protected function collectProduct()
+    protected function collectProduct(): int
     {
         $count = $this->count;
         $this->count = 0;

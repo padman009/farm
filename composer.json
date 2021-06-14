@@ -1,0 +1,19 @@
+{
+    "name": "bahti/farm",
+    "description": "Test task",
+    "type": "task",
+    "authors": [
+        {
+            "name": "Bakhtiyar",
+            "email": "bahaumnik@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "Animal/",
+            "Product/",
+            "Farm.php"
+        ]
+    }
+}
