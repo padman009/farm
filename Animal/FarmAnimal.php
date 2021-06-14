@@ -4,9 +4,10 @@
 namespace Farm\Animal;
 
 
-interface FarmAnimal
+abstract class FarmAnimal
 {
+    const ANIMAL_TYPE = '';
 
-    public function produce();
+    public function produce(){}
 
 }

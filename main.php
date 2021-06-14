@@ -6,9 +6,11 @@ use Farm\Animal\Cow;
 
 require_once 'Farm.php';
 require_once 'Animal/FarmAnimal.php';
-require_once 'Animal/Animal.php';
 require_once 'Animal/Cow.php';
 require_once 'Animal/Chicken.php';
+require_once 'Product/Product.php';
+require_once 'Product/Egg.php';
+require_once 'Product/Milk.php';
 
 $farm = new Farm();
 
@@ -23,3 +25,13 @@ for ($x = 0;$x < 20;$x++){
 }
 
 $farm->printAnimals();
+
+$farm->printProducts();
+
+$farm->collectProducts();
+
+$farm->printProducts();
+
+$farm->collectProducts();
+
+$farm->printProducts();

@@ -6,9 +6,8 @@ namespace Farm\Animal;
 
 use Farm\Product\Egg;
 
-class Chicken extends Animal implements FarmAnimal
+class Chicken extends FarmAnimal
 {
-
     const ANIMAL_TYPE = 'CHICKEN';
 
     public function produce()
